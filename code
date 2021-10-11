@@ -1,0 +1,41 @@
+y = 1
+z = 1
+w = 1
+
+Question_amount = int(input("How many Vocabs would you like to set up? "))
+
+Q = {}
+A = {}
+AI ={}
+
+for x in range(Questionamount):
+    Q["Question{}".format(y)] = input("Enter question{} ".format(y))
+    A["Answer_{}".format(y)] = input("Enter answer for question{} ".format(y))
+    y += 1
+
+
+go_on = input("Would you like to start vocabulary training now? J/N ").lower()
+
+
+
+if go_on == "j":
+    for x in range(Questionamount):
+        print(Q["Question{}".format(z)])
+        AI["AnswerInput{}".format(z)] = input("Your answer: ")
+        if AI["AnswerInput{}".format(z)] == A["Answer{}".format(z)]:
+            print("you were correct")
+        else:
+            print("you were incorrect")
+            print("the correct answer was:")
+            print(A["Answer{}".format(z)])
+        z += 1
+elif go_on == "n":
+        exit()
+else:
+    print("""type "n" to close program, type "j" to continue""")
+        AI["AnswerInput{}".format(z)] = input("Your answer: ")
+        z += 1
+    else:
+        exit()
+if AI["AnswerInput{}".format(w)] == A["Answer_{}".format(w)]:
+    print("you are 100% correct!") 
